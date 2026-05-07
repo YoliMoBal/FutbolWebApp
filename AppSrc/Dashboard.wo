@@ -34,6 +34,48 @@ Object oDashboard is a cWebView
     Set pbShowCaption to False
     Set psCSSClass to "Dashboard"
     
+    Object oMenuGroup is a cWebMenuGroup
+        Object oEntrenadorMenu is a cWebMenuItem
+            Set psCaption to "Entrenador"
+            WebRegisterPath ntNavigateForwardCustom oSelectEntrenador
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+    
+        Object oEquipoMenu is a cWebMenuItem
+            Set psCaption to "Equipo"
+            WebRegisterPath ntNavigateForwardCustom oSelectEquipo
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+    
+        Object oJugadorMenu is a cWebMenuItem
+            Set psCaption to "Jugador"
+            WebRegisterPath ntNavigateForwardCustom oSelectJugador
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+    
+        Object oPosicionMenu is a cWebMenuItem
+            Set psCaption to "Posicion"
+            WebRegisterPath ntNavigateForwardCustom oSelectPosicion
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+    
+        Object oLigaMenu is a cWebMenuItem
+            Set psCaption to "Liga"
+            WebRegisterPath ntNavigateForwardCustom oSelectLiga
+            Procedure OnClick
+                Send NavigatePath
+            End_Procedure
+        End_Object
+    End_Object
+    
     Object oWebMainPanel is a cWebPanel
         Set piColumnCount to 24
         
